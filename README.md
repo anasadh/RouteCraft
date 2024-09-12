@@ -1,152 +1,94 @@
- # Link:-
-[AI Travel Genie](https://ai-travel-genie-ipk2.vercel.app/)
+# RouteCraft - Personalized AI Travel Itinerary Planner
 
+### Atlan Engineering Fellowship Task - 2024
+**Submitted by:** Anamika Sadh
 
-  
-# Trip Planner App  :earth_asia:	:mountain_snow:
+## Description
+RouteCraft is an AI-driven travel itinerary planner that generates personalized itineraries based on user inputs like budget, preferences, and trip duration. Using Google Gemini AI, Geoapify for mapping services, and Firebase for real-time data storage, it offers a seamless and intuitive travel planning experience. Users can explore places and hotels through Google Maps, view real-time data such as pricing and user ratings, and save itineraries securely using Google Authentication.
 
-<div style="text-align: center;"> 
- 
-## :star: Developed a Fullstack AI Trip Planner with React, Gemini AI, TailwindCSS & Firebase
- 
+## Features
+- **AI-Driven Itinerary Generation:** Google Gemini AI creates personalized travel plans based on user preferences.
+- **Geoapify Maps Integration:** Display hotels, restaurants, and attractions with real-time data like pricing, ratings, and address.
+- **Google Maps Redirection:** Clicking on places or hotels redirects users to Google Maps for advanced navigation, street view, and location details.
+- **Google Authentication:** Secure and simple sign-in for users to access and save their itineraries.
+- **Real-Time Travel Data:** Provides real-time info on pricing, availability, and location data for hotels and places to visit.
+- **Responsive Design:** Built with TailwindCSS, ensuring a mobile-first, responsive user experience.
+- **Reusable Components:** Developed using React.js, allowing for efficient, reusable UI components and fast rendering.
+- **Fast Development Environment:** Utilizes Vite for a quick development build and hot module replacement.
 
+## Technology Stack
+**Frontend:**
+- **Vite:** Provides a fast development environment with quick builds and hot module replacement.
+  **Why:** Enhances development speed and efficiency with faster build times.
+- **React.js:** Reusable components and fast rendering.
+  **Why:** Ensures smooth performance and quick updates.
+- **React Router:** Seamless navigation between app sections without page reloads.
+  **Why:** Enhances user experience with smooth transitions.
+- **Geoapify API:** Displays location data for places and hotels with real-time updates, redirects to Google Maps for detailed navigation.
+  **Why:** Offers flexible tools for location-based features.
+- **Google Maps Integration:** Allows users to explore destinations further with features like directions and street view.
+  **Why:** Provides advanced navigation tools for a better travel experience.
+- **TailwindCSS:** Utility-first CSS for responsive design.
+  **Why:** Ensures a mobile-first, responsive user interface.
+- **Shadcn/UI:** Provides reusable UI components like buttons and modals.
+  **Why:** Maintains a consistent and customizable design throughout the app.
 
-  ### Features: 
-
-- Environment,Vite set up
-- Firebase, Database creation
-- Google Authentication
-- Generate Trip From Gemini AI
-- React Routing
-- Shadcn/ui
-- React Google Autocomplete
-- Display place photo using Google Photo API
-- Full responsiveness on all pages
-- Deploy App on Vercel
-
-
-<br />
-
-
-## About the Project  :star2:
-![11](https://github.com/user-attachments/assets/81bdf33b-95b8-4ba0-b7f6-ab517ec54690)
-![3](https://github.com/user-attachments/assets/3d648acd-0c95-4d80-a257-4f1395edade7)
-![2](https://github.com/user-attachments/assets/35b35f6e-dbe2-4a3d-88a0-c14536688a4e)
-![1](https://github.com/user-attachments/assets/48151eb5-770f-4d8b-8149-c28a12a6fa39) 
-
-<br />
-
-
-
-
+**Backend:**
+- **Google Authentication:** Manages user login via Google Sign-In.
+  **Why:** Provides a secure and easy authentication method.
+- **Firebase Database:** Stores user data, travel preferences, itineraries, and trip history with real-time syncing.
+  **Why:** Ensures fast and scalable data management.
+- **Google Gemini AI:** Generates personalized travel itineraries based on user inputs like budget, duration, and interests.
+  **Why:** Delivers tailored travel suggestions using AI.
 
 ## Installation
 
 ### Prerequisites
-
-- Node.js (v14 or later)
-- npm or yarn
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (v14.x or later)
+- [npm](https://www.npmjs.com/) (v6.x or later)
+- A Firebase account and project for database and authentication setup.
 
 ### Steps
 
-1. **Clone the Repository**
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/routecraft.git
+   cd routecraft
 
+2. **Install dependencies:**
 
-
-2. **Install Dependencies**
-
-    ```sh
-    npm install    
-    ```
-
-3. **Run the Application**
-
-    ```sh
-    npm run dev
-    ```
-
-## Firebase Setup
-
-1. **Create a Firebase Project**
-
-    - Go to the [Firebase Console](https://console.firebase.google.com/)
-    - Click on "Add project" and follow the instructions
-
-2. **Add Firebase to Your Web App**
-
-    - Navigate to Project Settings > General
-    - Under "Your apps", click on the Firebase SDK snippet for your web app
-    - Copy the Firebase config object
-
-3. **Configure Firebase in Your Project**
-
-    - Create a `.env` file in the root of your project
-    - Add your Firebase config:
-
-    ```env
-    VITE_FIREBASE_API_KEY=your-api-key
-    VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
-    VITE_FIREBASE_PROJECT_ID=your-project-id
-    VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
-    VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-    VITE_FIREBASE_APP_ID=your-app-id
-    ```
-
-
-## React OAuth Google Setup
-
-1. **Install the Package**
-
-    ```sh
-    npm install react-oauth/google
-    ```
-
-2. **Configure Google OAuth**
-
-    - Go to the [Google Cloud Console](https://console.cloud.google.com/)
-    - Create a new project or select an existing one
-    - Navigate to APIs & Services > Credentials
-    - Create OAuth 2.0 Client IDs for your application
-
-3. **Set Up Environment Variables**
-
-    - Add the following to your `.env` file:
-
-    ```env
-    VITE_GOOGLE_CLIENT_ID=your-google-client-id
-    ```
-
-4. **Implement Google OAuth in Your App**
-
-    - Add the following code to your main application file, e.g., `src/App.js`:
-
-    ```javascript
-    import React from 'react';
-    import { GoogleOAuthProvider } from '@react-oauth/google';
-    import YourComponent from './YourComponent';
-
-    const App = () => {
-      return (
-        <GoogleOAuthProvider clientId={process.env.VITE_GOOGLE_CLIENT_ID}>
-          <YourComponent />
-        </GoogleOAuthProvider>
-      );
-    };
-
-    export default App;
-    ```
-
-## Setup .env file
-### :key: Environment Variables
-
-
-```js
-VITE_GOOGLE_PLACES_API_KEY
-VITE_GOOGLE_GEMINI_AI_API_KEY
-VITE_GOOGLE_AUTH_CLIENT_ID
+```bash
+npm install
 ```
 
+3. **Create a Firebase project:**
 
+Go to the Firebase Console and create a new project.
+Set up Firebase Authentication (Google Sign-In) and Firestore Database.
+Obtain your Firebase configuration details.
+Set up API keys:
 
+Sign up for the Google Gemini AI API and Geoapify API.
+Obtain API keys for both services.
+Configure environment variables:
 
+4. **Create a .env file at the root of your project.**
+Add the following keys to your .env file:
+```bash
+Copy code
+VITE_FIREBASE_API_KEY=<your-firebase-api-key>
+VITE_FIREBASE_AUTH_DOMAIN=<your-firebase-auth-domain>
+VITE_FIREBASE_PROJECT_ID=<your-firebase-project-id>
+VITE_FIREBASE_STORAGE_BUCKET=<your-firebase-storage-bucket>
+VITE_FIREBASE_MESSAGING_SENDER_ID=<your-firebase-sender-id>
+VITE_FIREBASE_APP_ID=<your-firebase-app-id>
+VITE_GEOAPIFY_API_KEY=<your-geoapify-api-key>
+VITE_GEMINI_API_KEY=<your-gemini-api-key>
+```
+5. **Start the application:**
+Run the development server:
 
+```bash
+npm run dev
+```
