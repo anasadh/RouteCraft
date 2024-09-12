@@ -6,6 +6,14 @@
 ## Description
 RouteCraft is an AI-driven travel itinerary planner that generates personalized itineraries based on user inputs like budget, preferences, and trip duration. Using Google Gemini AI, Geoapify for mapping services, and Firebase for real-time data storage, it offers a seamless and intuitive travel planning experience. Users can explore places and hotels through Google Maps, view real-time data such as pricing and user ratings, and save itineraries securely using Google Authentication.
 
+
+---
+
+### [Live Demo](https://drive.google.com/file/d/1widY-5Ujv059eRhGSrFFMAbgCDrguuMb/view?usp=sharing) | [Documentation](Documentation.pdf)
+
+---
+
+
 ## Features
 - **AI-Driven Itinerary Generation:** Google Gemini AI creates personalized travel plans based on user preferences.
 - **Geoapify Maps Integration:** Display hotels, restaurants, and attractions with real-time data like pricing, ratings, and address.
